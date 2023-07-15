@@ -2,8 +2,8 @@
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 
-vim.keymap.set('n', 'FF', 'gT')
-vim.keymap.set('n', 'ff', 'gt')
+vim.keymap.set('n', 'FF', 'gT', {desc = "go to previous tab"})
+vim.keymap.set('n', 'ff', 'gt', {desc = "go to next tab"})
 vim.keymap.set('n', '#', '#N')
 vim.keymap.set('n', 'zl', 'zt')
 vim.keymap.set('n', '：', ':')
