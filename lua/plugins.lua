@@ -117,6 +117,17 @@ require('lazy').setup({
       require('neo-tree').setup {}
     end,
   },
+
+  -- optimit buffers and tags
+  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+
+  -- smooth scroll
+  {
+    'karb94/neoscroll.nvim',
+    config = function ()
+      require('neoscroll').setup()
+    end,
+  },
 }, {})
 
 -- [[ Configure tpope/vim-rhubarb ]]
@@ -148,6 +159,10 @@ require('telescope').setup {
     },
   },
 }
+
+-- [[ Configure bufferline ]]
+vim.opt.termguicolors = true
+require("bufferline").setup{}
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
