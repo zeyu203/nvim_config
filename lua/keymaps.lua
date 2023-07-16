@@ -8,6 +8,7 @@ vim.keymap.set('n', '#', '#N')
 vim.keymap.set('n', 'zl', 'zt')
 vim.keymap.set('n', '：', ':')
 vim.keymap.set('n', '<F8>', ':vsplit<CR>:terminal<CR>:set nonu<CR>i')
+vim.keymap.set('n', '<F5>', '<Cmd>Neotree toggle<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>')
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })

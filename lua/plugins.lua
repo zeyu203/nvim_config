@@ -95,17 +95,35 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
       },
     },
   },
+
+  -- file tree
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    version = "*",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      'kyazdani42/nvim-tree.lua',
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    },
+    config = function ()
+      require('neo-tree').setup {}
+    end,
+  },
 }, {})
 
 -- [[ Configure tpope/vim-rhubarb ]]
 vim.g.github_enterprise_urls = {'https://git.intra.weibo.com', 'https://github.com'}
+
+-- [[ Configure neo-tree.nvim ]]
+vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
