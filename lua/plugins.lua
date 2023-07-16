@@ -128,6 +128,22 @@ require('lazy').setup({
       require('neoscroll').setup()
     end,
   },
+
+  {
+    'LunarVim/bigfile.nvim',
+    config = function ()
+      require("bigfile").setup {
+        filesize = 2, -- size of the file in MiB, the plugin round file sizes to the closest MiB
+        pattern = { "*" }, -- autocmd pattern or function see <### Overriding the detection of big files>
+        features = { -- features to disable
+          "treesitter",
+          "syntax",
+          "vimopts",
+          "filetype",
+        },
+      }
+    end,
+  }
 }, {})
 
 -- [[ Configure tpope/vim-rhubarb ]]
