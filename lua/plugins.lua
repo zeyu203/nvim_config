@@ -50,6 +50,9 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- automatically highlighting other uses of the word under the cursor
+  'RRethy/vim-illuminate',
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
 
@@ -114,7 +117,11 @@ require('lazy').setup({
       "MunifTanjim/nui.nvim",
     },
     config = function ()
-      require('neo-tree').setup {}
+      require("neo-tree").setup({
+        filesystem = {
+          group_empty_dirs = true
+        }
+      })
     end,
   },
 
@@ -145,6 +152,38 @@ require('lazy').setup({
     end,
   }
 }, {})
+
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+
+-- default configuration
+
+require("illuminate").configure{}
+
+-- change the highlight style
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+
+--- auto update the highlight style on colorscheme change
+vim.api.nvim_create_autocmd({ "ColorScheme" }, {
+  pattern = { "*" },
+  callback = function(ev)
+    vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+  end
+})
 
 -- [[ Configure tpope/vim-rhubarb ]]
 vim.g.github_enterprise_urls = {'https://git.intra.weibo.com', 'https://github.com'}
