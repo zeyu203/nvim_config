@@ -11,6 +11,7 @@ vim.keymap.set('n', '<F8>', ':vsplit<CR>:terminal<CR>:set nonu<CR>i')
 vim.keymap.set('n', '<F5>', '<Cmd>Neotree toggle<CR>')
 vim.keymap.set('n', '<F6>', '<Cmd>Neotree reveal<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>')
+vim.keymap.set('n', '<leader>gj', '<Cmd>Joshuto<CR>', {desc = '[G]o to [J]oshuto'})
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -27,4 +28,3 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
