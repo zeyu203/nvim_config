@@ -67,3 +67,7 @@ vim.opt.termguicolors = true
 -- Display invisibale character
 -- vim.opt.list = true
 -- vim.opt.listchars = "space:·"
+
+if vim.g.goneovim then
+  vim.cmd('cd ~/temporary')
+end

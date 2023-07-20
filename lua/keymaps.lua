@@ -28,3 +28,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+if vim.g.goneovim then
+  vim.keymap.set('n', '<D-v>', 'a<C-r>+<Esc>')
+  vim.keymap.set({'i', 'o', 't', 'c'}, '<D-v>', '<C-r>+')
+  vim.keymap.set('v', '<D-v>', 'p')
+end
