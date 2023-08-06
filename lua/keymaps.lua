@@ -31,6 +31,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 if vim.g.goneovim then
   vim.keymap.set('n', '<D-v>', 'a<C-r>+<Esc>')
-  vim.keymap.set({'i', 'o', 't', 'c'}, '<D-v>', '<C-r>+')
+  vim.keymap.set('i', '<D-v>', '<C-r>+')
+  vim.keymap.set('o', '<D-v>', '<C-r>+')
+  vim.keymap.set('t', '<D-v>', '<C-r>+')
+  vim.keymap.set('c', '<D-v>', '<C-r>+')
   vim.keymap.set('v', '<D-v>', 'p')
 end
