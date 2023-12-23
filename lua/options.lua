@@ -71,3 +71,14 @@ vim.opt.termguicolors = true
 if vim.g.goneovim then
   vim.cmd('cd ~/temporary')
 end
+
+do local clip, opts = '/mnt/c/Windows/System32/clip.exe', {}
+  function opts.callback()
+    if vim.v.event.operator ~= 'y' then return end
+    vim.fn.system(clip, vim.fn.getreg(0))
+  end
+  if vim.fn.executable(clip) then
+    opts.group = vim.api.nvim_create_augroup("WSLYank", {clear = true})
+    vim.api.nvim_create_autocmd("TextYankPost", opts)
+  end
+end

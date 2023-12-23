@@ -4,7 +4,7 @@
   "coc.nvim": { "branch": "release", "commit": "bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043" },
   "gitsigns.nvim": { "branch": "main", "commit": "adcf2c7f2f495f5df148683764bf7cba6a70f34c" },
   "joshuto.nvim": { "branch": "master", "commit": "2993aca60f56757e854b509e34fcba4f25e778ba" },
-  "lazy.nvim": { "branch": "main", "commit": "25beed5e2e935ebc00d7e3eed1dc502df3c40e39" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
   "neo-tree.nvim": { "branch": "main", "commit": "981a43adcca25e7ccc3c589902d49f25e4d48ebc" },
   "neoscroll.nvim": { "branch": "master", "commit": "d7601c26c8a183fa8994ed339e70c2d841253e93" },
