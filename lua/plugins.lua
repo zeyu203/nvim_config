@@ -128,13 +128,13 @@ require('lazy').setup({
   -- optimit buffers and tags
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
-  -- smooth scroll
-  {
-    'karb94/neoscroll.nvim',
-    config = function ()
-      require('neoscroll').setup()
-    end,
-  },
+  -- -- smooth scroll
+  -- {
+  --   'karb94/neoscroll.nvim',
+  --   config = function ()
+  --     require('neoscroll').setup()
+  --   end,
+  -- },
 
   {
     'LunarVim/bigfile.nvim',
