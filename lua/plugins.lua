@@ -118,6 +118,14 @@ require('lazy').setup({
     },
     config = function ()
       require("neo-tree").setup({
+        windows = {
+          mappings = {
+            ["P"] = function(state)
+              local node = state.tree:get_node()
+              require("neo-tree.ui.renderer").open(state, node:get_parent_id())
+            end
+          }
+        },
         filesystem = {
           group_empty_dirs = true
         }
