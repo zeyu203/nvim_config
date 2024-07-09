@@ -11,6 +11,8 @@ vim.opt.encoding = "utf-8"
 -- Set highlight on search
 vim.opt.hlsearch = true
 
+vim.opt.foldmethod = "indent"
+
 -- Make line numbers default
 vim.wo.number = true
 
