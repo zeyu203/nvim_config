@@ -12,6 +12,7 @@ vim.opt.encoding = "utf-8"
 vim.opt.hlsearch = true
 
 vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
 
 -- Make line numbers default
 vim.wo.number = true
